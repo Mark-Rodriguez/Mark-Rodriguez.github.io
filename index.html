@@ -1,305 +1,342 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>Stylish Portfolio - Start Bootstrap Theme</title>
-
-    <!-- Bootstrap Core CSS -->
+    <title>Mark Rodriguez</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/stylish-portfolio.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
     <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
 
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand">
-                <a href="#top"  onclick = $("#menu-close").click(); >Start Bootstrap</a>
-            </li>
-            <li>
-                <a href="#top" onclick = $("#menu-close").click(); >Home</a>
-            </li>
-            <li>
-                <a href="#about" onclick = $("#menu-close").click(); >About</a>
-            </li>
-            <li>
-                <a href="#services" onclick = $("#menu-close").click(); >Services</a>
-            </li>
-            <li>
-                <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
-            </li>
-            <li>
-                <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
-            </li>
-        </ul>
-    </nav>
-
-    <!-- Header -->
-    <header id="top" class="header">
-        <div class="text-vertical-center">
-            <h1>Start Bootstrap</h1>
-            <h3>Free Bootstrap Themes &amp; Templates</h3>
-            <br>
-            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
-        </div>
-    </header>
-
-    <!-- About -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
-                    <p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
+<body data-spy="scroll" data-target="#navbar" data-offset="0" ng-app="site-app">
+    <div ng-controller="site-controller">
+        $location.hash('bottom');
+        <header id="header" role="banner">
+            <div class="container">
+                <div id="navbar" class="navbar navbar-default">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="" href="index.html" style="font-size:28px; padding:20px; line-height:72px;">Mark Rodriguez</a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#main-slider"><i class="icon-home"></i></a></li>
+                            <li><a href="#projects-anchor">Projects</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#about-us">About Us</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-    <!-- Services -->
-    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    <section id="services" class="services bg-primary">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Our Services</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-cloud fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Service Name</strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-compass fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Service Name</strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Service Name</strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-shield fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Service Name</strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
+        </header><!--/#header-->
+        <section id="main-slider" class="carousel">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="container">
+                        <div class="carousel-content">
+                            <h1>Mark Rodriguez</h1>
+                            <p class="lead">Web / Database / Video Game / Application Developer, Professional Googler</p>
                         </div>
                     </div>
-                    <!-- /.row (nested) -->
-                </div>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-    <!-- Callout -->
-    <aside class="callout">
-        <div class="text-vertical-center">
-            <h1>Vertically Centered Text</h1>
-        </div>
-    </aside>
-
-    <!-- Portfolio -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Our Work</h2>
-                    <hr class="small">
+                </div><!--/.item-->
+            </div><!--/.carousel-inner-->
+            <a class="prev" href="#main-slider" data-slide="prev"><i class="icon-angle-left"></i></a>
+            <a class="next" href="#main-slider" data-slide="next"><i class="icon-angle-right"></i></a>
+        </section><!--/#main-slider-->
+        <section id="services" style="position:relative;">
+            <div class="container">
+                <div class="box first">
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
-                                </a>
+                        <div class="col-md-4 col-sm-6" ng-click="scrollTo('angular-directives')">
+                            <div class="center project-item">
+                                <img src="images/angular-icon.png" style="width:75px;height:auto;" />
+                                <h4>Angular Directives</h4>
+                                <p>Angular Calendar, Drag and Drop, more to come.</p>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
-                                </a>
+                        </div><!--/.col-md-4-->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="center project-item">
+                                <i class="icon-gamepad icon-md icon-color2"></i>
+                                <h4>Video Games</h4>
+                                <p>Nothing to tell just yet.</p>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
-                                </a>
+                        </div><!--/.col-md-4-->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="center project-item">
+                                <i class="icon-book icon-md icon-color3"></i>
+                                <h4>Tutorials</h4>
+                                <p>Some simple samples.</p>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
-                                </a>
+                        </div><!--/.col-md-4-->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="center project-item">
+                                <i class="icon-eye-open icon-md icon-color4"></i>
+                                <h4>Generative Art</h4>
+                                <p>Math based art projects.</p>
                             </div>
+                        </div><!--/.col-md-4-->
+                    </div><!--/.row-->
+                </div><!--/.box-->
+            </div><!--/.container-->
+            <div id="projects-anchor" style="position:absolute;top:0px;left:0px;transform:translate(0%, -100%);height:110px;">
+            </div>
+        </section><!--/#services-->
+        <section id="" style="position:relative">
+            <div id="angular-directives" style="position:absolute;top:0px;left:0px;transform:translate(0%, -100%);height:50px;">
+            </div>
+            <div class="container">
+                <div class="box">
+                    <div class="center gap">
+                        <h2>Angular Directives</h2>
+                    </div><!--/.center-->
+                <div class="row">
+
+                    <div class="col-md-4 col-sm-6" ng-click="navTo('http://mark-rodriguez.github.io/angular-calendar-directive/')">
+                        <div class="center project-item">
+                            <i class="icon-calendar icon-lg icon-color5"></i>
+                            <h4>Angular Calendar Directive</h4>
+                            <p>Highly flexible / functional angular calendar directive.</p>
                         </div>
+                    </div><!--/.col-md-4-->
+                    <div class="col-md-4 col-sm-6" ng-click="navTo('Mark-Modriguez.github.io/angular-calendar-directive')">
+                        <div class="center project-item">
+                            <i class="icon-move icon-lg icon-color6"></i>
+                            <h4>Angular Drag and Drop Directive</h4>
+                            <p>Simple and easy to use drag and drop directive.</p>
+                        </div>
+                    </div><!--/.col-md-4-->
+                </div>
+                </div><!--/.box-->
+            </div><!--/.container-->
+        </section><!--/#portfolio-->
+        <section id="pricing">
+            <div class="container">
+                <div class="box">
+                    <div class="center">
+                        <h2>See our Pricings</h2>
+                        <p class="lead">Pellentesque habitant morbi tristique senectus et netus et <br>malesuada fames ac turpis egestas.</p>
+                    </div><!--/.center-->
+                    <div class="big-gap"></div>
+                    <div id="pricing-table" class="row">
+                        <div class="col-sm-4">
+                            <ul class="plan">
+                                <li class="plan-name">Basic</li>
+                                <li class="plan-price">$29</li>
+                                <li>5GB Storage</li>
+                                <li>1GB RAM</li>
+                                <li>400GB Bandwidth</li>
+                                <li>10 Email Address</li>
+                                <li>Forum Support</li>
+                                <li class="plan-action"><a href="#" class="btn btn-primary btn-lg">Signup</a></li>
+                            </ul>
+                        </div><!--/.col-sm-4-->
+                        <div class="col-sm-4">
+                            <ul class="plan featured">
+                                <li class="plan-name">Standard</li>
+                                <li class="plan-price">$49</li>
+                                <li>10GB Storage</li>
+                                <li>2GB RAM</li>
+                                <li>1TB Bandwidth</li>
+                                <li>100 Email Address</li>
+                                <li>Forum Support</li>
+                                <li class="plan-action"><a href="#" class="btn btn-primary btn-lg">Signup</a></li>
+                            </ul>
+                        </div><!--/.col-sm-4-->
+                        <div class="col-sm-4">
+                            <ul class="plan">
+                                <li class="plan-name">Advanced</li>
+                                <li class="plan-price">$199</li>
+                                <li>30GB Storage</li>
+                                <li>5GB RAM</li>
+                                <li>5TB Bandwidth</li>
+                                <li>1000 Email Address</li>
+                                <li>Forum Support</li>
+                                <li class="plan-action"><a href="#" class="btn btn-primary btn-lg">Signup</a></li>
+                            </ul>
+                        </div><!--/.col-sm-4-->
                     </div>
-                    <!-- /.row (nested) -->
-                    <a href="#" class="btn btn-dark">View More Items</a>
-                </div>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-    <!-- Call to Action -->
-    <aside class="call-to-action bg-primary">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h3>The buttons below are impossible to resist.</h3>
-                    <a href="#" class="btn btn-lg btn-light">Click Me!</a>
-                    <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
                 </div>
             </div>
-        </div>
-    </aside>
-
-    <!-- Map -->
-    <section id="contact" class="map">
-        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-        <br />
-        <small>
-            <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-        </small>
-        </iframe>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>Start Bootstrap</strong>
-                    </h4>
-                    <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a>
-                        </li>
-                    </ul>
-                    <br>
-                    <ul class="list-inline">
-                        <li>
-                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
-                        </li>
-                    </ul>
-                    <hr class="small">
-                    <p class="text-muted">Copyright &copy; Your Website 2014</p>
+        </section><!--/#pricing-->
+        <section id="about-us">
+            <div class="container">
+                <div class="box">
+                    <div class="center">
+                        <h2>Meet the Team</h2>
+                        <p class="lead">Pellentesque habitant morbi tristique senectus et netus et<br>malesuada fames ac turpis egestas.</p>
+                    </div>
+                    <div class="gap"></div>
+                    <div id="team-scroller" class="carousel scale">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="member">
+                                            <p><img class="img-responsive img-thumbnail img-circle" src="images/team1.jpg" alt=""></p>
+                                            <h3>Agnes Smith<small class="designation">CEO &amp; Founder</small></h3>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="member">
+                                            <p><img class="img-responsive img-thumbnail img-circle" src="images/team2.jpg" alt=""></p>
+                                            <h3>Donald Ford<small class="designation">Senior Vice President</small></h3>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="member">
+                                            <p><img class="img-responsive img-thumbnail img-circle" src="images/team3.jpg" alt=""></p>
+                                            <h3>Karen Richardson<small class="designation">Assitant Vice President</small></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="member">
+                                            <p><img class="img-responsive img-thumbnail img-circle" src="images/team3.jpg" alt=""></p>
+                                            <h3>David Robbins<small class="designation">Co-Founder</small></h3>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="member">
+                                            <p><img class="img-responsive img-thumbnail img-circle" src="images/team1.jpg" alt=""></p>
+                                            <h3>Philip Mejia<small class="designation">Marketing Manager</small></h3>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="member">
+                                            <p><img class="img-responsive img-thumbnail img-circle" src="images/team2.jpg" alt=""></p>
+                                            <h3>Charles Erickson<small class="designation">Support Manager</small></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="left-arrow" href="#team-scroller" data-slide="prev">
+                            <i class="icon-angle-left icon-4x"></i>
+                        </a>
+                        <a class="right-arrow" href="#team-scroller" data-slide="next">
+                            <i class="icon-angle-right icon-4x"></i>
+                        </a>
+                    </div><!--/.carousel-->
+                </div><!--/.box-->
+            </div><!--/.container-->
+        </section><!--/#about-us-->
+        <section id="contact">
+            <div class="container">
+                <div class="box last">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h1>Contact Form</h1>
+                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                            <div class="status alert alert-success" style="display: none"></div>
+                            <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php" role="form">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" required="required" placeholder="Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" required="required" placeholder="Email address">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Message"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-danger btn-lg">Send Message</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div><!--/.col-sm-6-->
+                        <div class="col-sm-6">
+                            <h1>Our Address</h1>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <address>
+                                        <strong>Twitter, Inc.</strong><br>
+                                        795 Folsom Ave, Suite 600<br>
+                                        San Francisco, CA 94107<br>
+                                        <abbr title="Phone">P:</abbr> (123) 456-7890
+                                    </address>
+                                </div>
+                                <div class="col-md-6">
+                                    <address>
+                                        <strong>Twitter, Inc.</strong><br>
+                                        795 Folsom Ave, Suite 600<br>
+                                        San Francisco, CA 94107<br>
+                                        <abbr title="Phone">P:</abbr> (123) 456-7890
+                                    </address>
+                                </div>
+                            </div>
+                            <h1>Connect with us</h1>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="social">
+                                        <li><a href="#"><i class="icon-facebook icon-social"></i> Facebook</a></li>
+                                        <li><a href="#"><i class="icon-google-plus icon-social"></i> Google Plus</a></li>
+                                        <li><a href="#"><i class="icon-pinterest icon-social"></i> Pinterest</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="social">
+                                        <li><a href="#"><i class="icon-linkedin icon-social"></i> Linkedin</a></li>
+                                        <li><a href="#"><i class="icon-twitter icon-social"></i> Twitter</a></li>
+                                        <li><a href="#"><i class="icon-youtube icon-social"></i> Youtube</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div><!--/.col-sm-6-->
+                    </div><!--/.row-->
+                </div><!--/.box-->
+            </div><!--/.container-->
+        </section><!--/#contact-->
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        &copy; 2013 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights Reserved.
+                    </div>
+                    <div class="col-sm-6">
+                        <img class="pull-right" src="images/shapebootstrap.png" alt="ShapeBootstrap" title="ShapeBootstrap">
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
-    </script>
-
+        </footer><!--/#footer-->
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.isotope.min.js"></script>
+        <script src="js/jquery.prettyPhoto.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/angular.min.js"></script>
+        <script src="js/site-app.js"></script>
+    </div>
 </body>
-
 </html>
